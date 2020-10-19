@@ -1,0 +1,440 @@
+
+
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Aptitute Test Portal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+        ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="AptitudeTest/Content/img/alfa32x32favicon.png">
+
+    
+    <!-- Google Fonts
+        ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+        ============================================ -->
+    <link rel="stylesheet" href="AptitudeTest/Content/css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+        ============================================ -->
+    <link rel="stylesheet" href="AptitudeTest/Content/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/owl.carousel.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/owl.theme.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/owl.transitions.css">
+    <!-- animate CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/animate.css">
+    <!-- normalize CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/normalize.css">
+    <!-- meanmenu icon CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/meanmenu.min.css">
+    <!-- main CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/main.css">
+    <!-- educate icon CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/educate-custon-icon.css">
+    <!-- morrisjs CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/style.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/editor/select2.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/editor/datetimepicker.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/editor/bootstrap-editable.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/editor/x-editor-style.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/form/all-type-forms.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/data-table/bootstrap-table.css">
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/data-table/bootstrap-editable.css">
+    <link href="/AptitudeTest/Content/c3.css" rel="stylesheet" />
+
+    <!-- responsive CSS
+        ============================================ -->
+    <link rel="stylesheet" href="/AptitudeTest/Content/css/responsive.css">
+    <!-- modernizr JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <style>
+        .sidebar-nav .metismenu li .icon-wrap {
+            margin-right: 5px;
+            font-size: 20px;
+            color: #303030;
+        }
+
+        .educate-icon {
+            font-family: 'educate-icon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .educate-professor:before {
+            content: "\e914";
+        }
+    </style>
+
+    <script type="text/javascript">
+    var dt = '';
+
+        var dateAr = dt.split('-');
+    var newDate = dateAr[1] + '/' + dateAr[0] + '/' + dateAr[2];
+    var end = new Date(dateAr[1] + '/' + dateAr[0] + '/' + dateAr[2]);
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById('timecountdown').innerHTML = 'Ends';
+            window.location.href = '/AptitudeTest/Test/Review';
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var _hours = Math.floor((distance % _day) / _hour);
+        var _minutes = Math.floor((distance % _hour) / _minute);
+        var _seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('timecountdown').innerHTML = 'Hrs: ' + _hours;
+        document.getElementById('timecountdown').innerHTML = ' Mins: ' + _minutes;
+        document.getElementById('timecountdown').innerHTML += ' Secs: ' + _seconds;
+        //document.getElementById('timecountdown').innerHTML += 'Mins: ' + _minutes;
+        //document.getElementById('timecountdown').innerHTML += 'Secs: ' + _seconds;
+
+    }
+    timer = setInterval(showRemaining, 1000);
+    </script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Start Header menu area -->
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <a href="/Home/Index"><img class="main-logo" src="/AptitudeTest/Content/img/logo.png" alt="" /></a>
+                <strong><a href="/Home/Index"><img src="/AptitudeTest/Content/img/logosn.png" alt="" /></a></strong>
+            </div>
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <!-- <a class="has-arrow" href="index.html" aria-expanded="false">
+            <span class="educate-icon educate-home icon-wrap"></span>
+            <span class="mini-click-non">Dashboard</span>
+        </a> -->
+                        </li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false">
+                                    <img src="/AptitudeTest/Content/img/001.png" alt="" height="25px" width="25px" />
+                                    <span class="mini-click-non">User Management</span>
+                                </a>
+                                <ul class="submenu-angle" aria-expanded="false">
+                                            <li><a title="User Request" href=/AptitudeTest/UserRequest/Index aria-expanded="false"><span class="mini-sub-pro">User Request</span></a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false">
+                                    <img src="/AptitudeTest/Content/img/002.png" alt="" height="25px" width="25px" />
+                                    <span class="mini-click-non">Candidate</span>
+                                </a>
+                                <ul class="submenu-angle" aria-expanded="false">
+                                            <li><a title="Candidate Request" href=/AptitudeTest/CandidateEnrolment/Index aria-expanded="false"><span class="mini-sub-pro">Candidate Request</span></a></li>
+                                            <li><a title="Bulk Candidate Request" href=/AptitudeTest/BulkCandidateRequest/Index aria-expanded="false"><span class="mini-sub-pro">Bulk Candidate Request</span></a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false">
+                                    <img src="/AptitudeTest/Content/img/01.png" alt="" height="25px" width="25px" />
+                                    <span class="mini-click-non">Test Paper</span>
+                                </a>
+                                <ul class="submenu-angle" aria-expanded="false">
+                                            <li><a title="Test Paper Request" href=/AptitudeTest/QAPool/Index aria-expanded="false"><span class="mini-sub-pro">Test Paper Request</span></a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false">
+                                    <img src="/AptitudeTest/Content/img/01.png" alt="" height="25px" width="25px" />
+                                    <span class="mini-click-non">Question Answer</span>
+                                </a>
+                                <ul class="submenu-angle" aria-expanded="false">
+                                            <li><a title="Question Answer Request" href=/AptitudeTest/QAGeneration/Index aria-expanded="false"><span class="mini-sub-pro">Question Answer Request</span></a></li>
+                                            <li><a title="Bulk Question Answer Request" href=/AptitudeTest/BulkQARequest/Index aria-expanded="false"><span class="mini-sub-pro">Bulk Question Request</span></a></li>
+
+                                </ul>
+                            </li>
+                                    <li>
+                                        <a title="Review Test" href=/AptitudeTest/ReviewTest/Index aria-expanded="false">
+                                        <img src="/AptitudeTest/Content/img/check-list.png" alt="" height="25px" width="25px" />
+                                        <span class="mini-click-non">Review Test</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a title="Report" href=/AptitudeTest/Report/Index aria-expanded="false">
+                                        <img src="/AptitudeTest/Content/img/check-list.png" alt="" height="25px" width="25px" />
+                                        <span class="mini-click-non">Report</span>
+                                        </a>
+                                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- End Header menu area -->
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href=/AptitudeTest/Home><img class="main-logo" src="/AptitudeTest/Content/img/logo.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header start-->
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                                <img class="main-logo" src="/AptitudeTest/Content/img/dots1.png" alt="" />
+                                                
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                        <div class="header-right-info">
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
+
+                                                <li class="nav-item">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false"
+                                                       class="nav-link dropdown-toggle">
+                                                        
+                                                        <span class="admin-name">Administrator One</span>
+                                                        <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+                                                    </a>
+                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                        
+                                                        <li>
+                                                            <a href=/AptitudeTest/Login/Index>
+                                                                <span class="edu-icon edu-locked author-log-ic"></span>Log
+                                                                Out
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu start -->
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="mobile-menu">
+                                <nav id="dropdown">
+                                    <ul class="mobile-menu-nav">
+                                                <li>
+                                                            <a title="User Request" href=/AptitudeTest/UserRequest/Index aria-expanded="false"><span class="mini-sub-pro">User Request</span></a>
+
+                                                </li>
+                                                <li>
+                                                            <a title="Candidate Request" href=/AptitudeTest/CandidateEnrolment/Index aria-expanded="false"><span class="mini-sub-pro">Candidate Request</span></a>
+                                                            <a title="Bulk Candidate Request" href=/AptitudeTest/BulkCandidateRequest/Index aria-expanded="false"><span class="mini-sub-pro">Bulk Candidate Request</span></a>
+
+                                                </li>
+                                                <li>
+                                                            <a title="Test Paper Request" href=/AptitudeTest/QAPool/Index aria-expanded="false"><span class="mini-sub-pro">Test Paper Request</span></a>
+
+                                                </li>
+                                                <li>
+                                                        <a title="Question Answer Request" href=/AptitudeTest/QAGeneration/Index aria-expanded="false"><span class="mini-sub-pro">Question Answer Request</span></a>
+                                                        <a title="Bulk Question Answer Request" href=/AptitudeTest/BulkQARequest/Index aria-expanded="false"><span class="mini-sub-pro">Bulk Question Request</span></a>
+
+                                                    </li>
+                                                    <li>
+                                                        <a data-toggle="collapse" data-target="#Charts" href=/AptitudeTest/ReviewTest/Index>Review Test
+                                                        <span class="admin-project-icon edu-icon edu-down-arrow"></span>
+                                                        </a>
+
+                                                    </li>
+
+                                        
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Mobile Menu end -->
+            <!-- <div class="breadcome-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcome-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcome-heading">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <ul class="breadcome-menu">
+                                    <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                    </li>
+                                    <li><span class="bread-blod">Dashboard V.1</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+        </div>
+        <!--header end-->
+        
+
+
+
+
+    </div>
+    <!--Footer Start-->
+    <footer>
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <!-- <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p> -->
+                            
+                            <p>Copyright © 2020 www.bankalfalah.com, All rights reserved</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer End-->
+    <!-- jquery
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/bootstrap.min.js"></script>
+    <!-- wow JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/wow.min.js"></script>
+    <!-- price-slider JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/jquery.scrollUp.min.js"></script>
+    <!-- counterup JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/counterup/jquery.counterup.min.js"></script>
+    <script src="/AptitudeTest/Content/js/counterup/waypoints.min.js"></script>
+    <script src="/AptitudeTest/Content/js/counterup/counterup-active.js"></script>
+    <!-- mCustomScrollbar JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/AptitudeTest/Content/js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/metisMenu/metisMenu.min.js"></script>
+    <script src="/AptitudeTest/Content/js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/morrisjs/raphael-min.js"></script>
+    <script src="/AptitudeTest/Content/js/morrisjs/morris.js"></script>
+    <script src="/AptitudeTest/Content/js/morrisjs/morris-active.js"></script>
+    <!-- morrisjs JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="/AptitudeTest/Content/js/sparkline/jquery.charts-sparkline.js"></script>
+    <script src="/AptitudeTest/Content/js/sparkline/sparkline-active.js"></script>
+    <!-- calendar JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/calendar/moment.min.js"></script>
+    <script src="/AptitudeTest/Content/js/calendar/fullcalendar.min.js"></script>
+    <script src="/AptitudeTest/Content/js/calendar/fullcalendar-active.js"></script>
+    <!-- plugins JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/plugins.js"></script>
+    <!-- main JS
+        ============================================ -->
+    <script src="/AptitudeTest/Content/js/main.js"></script>
+
+</body>
+
+</html>
